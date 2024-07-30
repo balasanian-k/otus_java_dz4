@@ -23,13 +23,14 @@ public class HeadlessModeTest {
     public void init() {
         driver = new DriverFactory("--start-maximized").create();
         waitTools = new WaitTools(driver);
+        logger.info("Opening start point URL");
         driver.get(startPointUrl);
     }
 
     @AfterEach
     public void stopDriver() {
         if (driver !=null) {
-            logger.info("Разрываем соединение");
+            logger.info("Disconnecting");
             driver.quit();
         }
     }
@@ -45,6 +46,8 @@ public class HeadlessModeTest {
 
         String receivedOtusText = otusLinkText.getText().trim();
         Assertions.assertEquals(expectedOtusText, receivedOtusText );
+        logger.info("Match checking");
+        logger.info("Test passed. Hooray!");
 
     }
 }
