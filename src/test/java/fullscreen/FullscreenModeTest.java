@@ -1,27 +1,20 @@
-package auth;
+package fullscreen;
 
 import Factory.DriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.lang3.SystemProperties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import tools.WaitTools;
 
-import java.time.Duration;
+public class FullscreenModeTest {
 
-public class AuthTest {
-
-    Logger logger = (Logger) LogManager.getLogger(AuthTest.class);
+    Logger logger = (Logger) LogManager.getLogger(FullscreenModeTest.class);
 
     private String baseUrl = System.getProperty("base.url");
     private String login = System.getProperty("login");
@@ -33,7 +26,7 @@ public class AuthTest {
 
     @BeforeEach
       public void init() {
-        driver = new DriverFactory("--start-fullscreen").create();
+        driver = new DriverFactory("--start-maximized").create();
         waitTools = new WaitTools(driver);
         driver.get(baseUrl);
     }
@@ -81,6 +74,6 @@ public class AuthTest {
 
         String cookies = driver.manage().getCookies().toString();
         logger.info("Cookies: " + cookies);
-        logger.info("Test passed. Applause!");
+        logger.info("Test passed. Hooray!");
     }
 }

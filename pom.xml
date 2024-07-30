@@ -14,9 +14,9 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <selenium.java.version>4.17.0</selenium.java.version>
-        <junit.version>5.10.2</junit.version>
-        <webdriver.manager.version>5.6.3</webdriver.manager.version>
+        <selenium.java.version>4.22.0</selenium.java.version>
+        <junit.version>5.10.3</junit.version>
+        <webdriver.manager.version>5.9.1</webdriver.manager.version>
 
         <surefire.plugin.version>3.2.5</surefire.plugin.version>
         <compiler.plugin.version>3.12.1</compiler.plugin.version>
@@ -33,9 +33,8 @@
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
+            <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>

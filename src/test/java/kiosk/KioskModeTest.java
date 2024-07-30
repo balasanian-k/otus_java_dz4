@@ -1,6 +1,6 @@
 package kiosk;
 
-import auth.AuthTest;
+import fullscreen.FullscreenModeTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class KioskModeTest {
 
-    Logger logger = LogManager.getLogger(AuthTest.class);
+    Logger logger = LogManager.getLogger(FullscreenModeTest.class);
 
     private String kioskUrl = "https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818";
 
@@ -58,7 +58,7 @@ public class KioskModeTest {
 
         boolean factResult = driver.findElement(By.cssSelector("div.pp_pic_holder.light_rounded")).isDisplayed();
         Assertions.assertTrue(factResult);
-        logger.info("Test passed. Applause!");
+        logger.info("Test passed. Hooray!");
 
     }
 }
