@@ -1,6 +1,6 @@
 package headless;
 
-import Factory.DriverFactory;
+import factory.DriverFactory;
 import fullscreen.FullscreenModeTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import tools.WaitTools;
 
 public class HeadlessModeTest {
-    Logger logger = LogManager.getLogger(FullscreenModeTest.class);
+    Logger logger = LogManager.getLogger(HeadlessModeTest.class);
     private WebDriver driver;
     private String startPointUrl = "https://duckduckgo.com/";
 
